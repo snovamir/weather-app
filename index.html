@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2b4b0b1391.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form id="search-form">
+          <div class="input-group mb-3 input-group-lg search-city">
+            
+            <input class="form-control" id="search-input" placeholder="Enter your city" />
+            <button
+              class="btn btn-outline-light"
+              type="button"
+              id="search-button"
+            >
+              Search
+            </button>
+            <button class="btn btn-outline-light" type="button" id="current-location">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+            </form>
+          </div>
+          
+          <div class="row your-city">
+            <div class="col">
+              <h1 id="current-city"></h1>
+              <h6 id="current-date"></h6>
+              <h6 id="current-time"></h6>
+              
+            </div>
+          </div>
+
+          <div class="row weather-today">
+            <div class="col">
+              <img src="img/warm.png" alt="weather icon" />
+            </div>
+            <div class="col degrees">
+              <h2> 
+                <span id="tempnow"></span>°
+              </h2>
+              <span id="degrees">
+                <a href="#" id="celsius">C</a> |
+                <a href="#" id="fahrenheit">F</a>
+                </span>
+              <h5 id="weatherDescription"></h5>
+            </div>
+            <div class="col">
+              <div>
+                <i class="fa-solid fa-temperature-high"></i>
+                <span id="tmax"></span><span>°C</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-temperature-low"></i>
+                <span id="tmin"></span><span>°C</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-droplet"></i>
+                <span id="humidity"></span><span>%</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-wind"></i>
+                <span id="wind"></span><span>km/h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row weather-week">
+            <div class="col">
+              <div class="week-day">Tue</div>
+              <div class="week-date">24/05</div>
+              <img
+                class="week-img"
+                width="30px"
+                src="img/warm.png"
+                alt="weather icon"
+              />
+              <div>
+                <span class="t-max">21°</span>
+                <span class="t-min">17°</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="week-day">Wed</div>
+              <div class="week-date">25/05</div>
+              <img
+                class="week-img"
+                width="30px"
+                src="img/warm-clouds.png"
+                alt="weather icon"
+              />
+              <div>
+                <span class="t-max">18°</span>
+                <span class="t-min">14°</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="week-day">Thu</div>
+              <div class="week-date">26/05</div>
+              <img
+                class="week-img"
+                width="30px"
+                src="img/thunderstorm.png"
+                alt="weather icon"
+              />
+              <div>
+                <span class="t-max">15°</span> <span class="t-min">11°</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="week-day">Fri</div>
+              <div class="week-date">27/05</div>
+              <img
+                class="week-img"
+                width="30px"
+                src="img/clouds.png"
+                alt="weather icon"
+              />
+              <div>
+                <span class="t-max">17°</span> <span class="t-min">13°</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="week-day">Sat</div>
+              <div class="week-date">28/05</div>
+              <img
+                class="week-img"
+                width="30px"
+                src="img/warm-clouds.png"
+                alt="weather icon"
+              />
+              <div>
+                <span class="t-max">20°</span> <span class="t-min">16°</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

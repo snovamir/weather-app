@@ -1,0 +1,123 @@
+.card {
+  max-width: 700px;
+  background-image: url(../img/kyiv.jpg);
+  margin: 100px auto;
+  padding: 20px 30px 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.weather-today {
+  margin-top: 25px;
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  box-shadow: 1px 3px 7px #505050;
+}
+.weather-today .col {
+  padding: 20px;
+  line-height: 190%;
+}
+.weather-today .col h2 {
+  display: inline;
+  color: rgb(65 77 82);
+  font-size: 4em;
+  padding-top: 5px;
+}
+.weather-today .col h5 {
+  color: rgb(76 90 96);
+  font-size: 1.5em;
+  padding-left: 3px;
+}
+.weather-today .col:nth-child(1) {
+  text-align: center;
+}
+.weather-today .col:nth-child(3) {
+  color: rgb(76 90 96);
+  padding-top: 20px;
+  font-size: 1.2em;
+}
+.weather-today img {
+  width: 140px;
+  height: auto;
+}
+.your-city {
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+}
+.your-city h1 {
+  font-size: 5.7em;
+  text-shadow: 2px 3px 5px #2e2e2e;
+  letter-spacing: 2px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+.your-city h6 {
+  font-size: 1rem;
+  padding-left: 7px;
+  text-shadow: 1px 3px 4px #2e2e2e;
+}
+.weather-week {
+  padding-top: 25px;
+  text-align: center;
+}
+.weather-week .col {
+  line-height: 190%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 0 15px 0;
+  margin: 7px;
+  border-radius: 6px;
+  box-shadow: 1px 3px 7px #505050;
+}
+.weather-week .col:nth-child(1) {
+  margin-left: 0;
+}
+.weather-week .col:nth-child(5) {
+  margin-right: 0;
+}
+.week-day {
+  color: rgb(63 75 80);
+  font-size: 1.3em;
+  font-variant: small-caps;
+  margin-bottom: 5px;
+}
+.week-date {
+  color: rgb(91 103 108);
+}
+.t-max {
+  color: rgb(63 75 80);
+  font-size: 1.2em;
+}
+.t-min {
+  color: rgb(91 103 108);
+}
+.week-img {
+  height: 40px;
+  width: auto;
+  margin: 10px;
+}
+.search-city {
+  font-size: 18px;
+  box-shadow: 1px 3px 7px #505050;
+}
+.degrees {
+  position: relative;
+  margin-left: -5px;
+}
+#degrees {
+  position: absolute;
+  top: 28px;
+  color: rgb(65 77 82);
+  font-size: 1.4em;
+}
+#degrees a {
+  color: rgb(65 77 82);
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+#degrees a:visited {
+  color: rgb(65 77 82);
+  text-decoration: none;
+}
+#degrees a:hover {
+  color: rgba(65, 77, 82, 0.7);
+  font-size: 1.5em;
+}
