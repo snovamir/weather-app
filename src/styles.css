@@ -121,3 +121,20 @@
   color: rgba(65, 77, 82, 0.7);
   font-size: 1.5em;
 }
+footer {
+  color: #fff;
+  font-size: 1rem;
+  padding-left: 7px;
+  text-shadow: 1px 3px 4px #2e2e2e;
+  padding-top: 17px;
+}
+footer a {
+  color: #fff;
+  transition: all 150ms ease-in-out;
+}
+footer a:hover {
+  color: rgba(65, 77, 82, 0.7);
+}
+footer a:visited {
+  color: #fff;
+}
