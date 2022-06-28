@@ -63,7 +63,7 @@ function showTemperature(response) {
     response.data.main.temp
   );
   document.querySelector("#weatherDescription").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   document.querySelector("#tmax").innerHTML = Math.round(
     response.data.main.temp_max
   );
@@ -74,6 +74,15 @@ function showTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", `response.data.weather[0].description`);
 }
 
 function search(city) {

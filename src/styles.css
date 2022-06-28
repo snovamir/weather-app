@@ -138,3 +138,10 @@ footer a:hover {
 footer a:visited {
   color: #fff;
 }
+#icon {
+  border-radius: 6px;
+  background: white;
+}
+#weatherDescription:first-letter {
+  text-transform: capitalize;
+}
