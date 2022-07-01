@@ -1,5 +1,3 @@
-// Display the current date and time
-
 function formatDate(date) {
   let days = [
     "Sunday",
@@ -55,8 +53,6 @@ let dayAndMonth = document.querySelector("#current-date");
 let currentDayAndMonth = new Date();
 dayAndMonth.innerHTML = formatDay(currentDayAndMonth);
 
-// When a user searches for a city (example: New York), it should display the name of the city on the result page and the current temperature of the city.
-
 function showTemperature(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#tempnow").innerHTML = Math.round(
@@ -83,6 +79,8 @@ function showTemperature(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", `response.data.weather[0].description`);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function search(city) {
@@ -95,15 +93,13 @@ function search(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#search-input").value;
-  search(city);
+  let city = document.querySelector("#search-input");
+  search(city.value);
 }
 
 let citySearch = document.querySelector("#search-form");
 citySearch.addEventListener("click", handleSubmit);
 citySearch.addEventListener("submit", handleSubmit);
-
-// Add a Current Location button. When clicking on it, it uses the Geolocation API to get your GPS coordinates and display and the city and current temperature using the OpenWeather API
 
 function showPosition(position) {
   let currentPosition = `lat=${position.coords.latitude}&lon=${position.coords.longitude}`;
@@ -121,5 +117,26 @@ function showCity(event) {
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", showCity);
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperature = document.querySelector("#tempnow");
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#tempnow");
+  temperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", displayCelsius);
 
 search("Kyiv");
