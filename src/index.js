@@ -188,25 +188,4 @@ function showCity(event) {
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", showCity);
 
-function displayFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperature = document.querySelector("#tempnow");
-  temperature.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsius(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#tempnow");
-  temperature.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", displayFahrenheit);
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", displayCelsius);
-
 search("Kyiv");

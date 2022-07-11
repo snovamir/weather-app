@@ -1,6 +1,11 @@
+body {
+  background-image: url(../img/sky.jpg);
+  background-position: center;
+}
 .card {
   max-width: 700px;
-  background-image: url(../img/kyiv.jpg);
+  background-image: url(../img/sky.jpg);
+  box-shadow: 1px 3px 7px #505050;
   margin: 100px auto;
   padding: 20px 30px 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -8,7 +13,7 @@
 .weather-today {
   margin-top: 25px;
   padding: 10px 0;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0);
   border-radius: 6px;
   box-shadow: 1px 3px 7px #505050;
 }
@@ -41,7 +46,7 @@
 }
 .your-city {
   margin-top: 20px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 1);
 }
 .your-city h1 {
   font-size: 5.7em;
@@ -61,7 +66,7 @@
 }
 .weather-week .col {
   line-height: 190%;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0);
   padding: 20px 0 15px 0;
   margin: 7px;
   border-radius: 6px;
@@ -69,7 +74,7 @@
   transition: all 150ms ease-in-out;
 }
 .weather-week .col:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
 .weather-week .col:nth-child(1) {
@@ -105,6 +110,7 @@
 .degrees {
   position: relative;
   margin-left: -5px;
+  margin-top: 10px;
 }
 #degrees {
   position: absolute;
@@ -133,7 +139,7 @@ footer {
   padding-top: 17px;
 }
 footer a {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 1);
   transition: all 150ms ease-in-out;
 }
 footer a:hover {
@@ -141,9 +147,6 @@ footer a:hover {
 }
 footer a:visited {
   color: #fff;
-}
-#icon {
-  border-radius: 6px;
 }
 #weatherDescription:first-letter {
   text-transform: capitalize;
